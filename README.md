@@ -33,4 +33,4 @@ You can hold start to run the test every other frame, removing the need to mash 
 
 You can hold select to run the test every other frame, while also running 4 extra instances of the test.
 
-You can hold the Up button during a test to run LDA #$FF, STA $2007 before the test. I don't believe there are any tests where this changes the outcome in an interesting way.
+You can hold the Up button during a test to run LDA $2007 before the test. 

@@ -462,6 +462,7 @@ TestForBButton:
 	
 TestForStart:
 	LDA <$00
+	AND #$10
 	CMP #$10
 	BNE TestForSelect
 	JSR RunTest	; start can be held for convenience
@@ -469,6 +470,7 @@ TestForStart:
 	
 TestForSelect:
 	LDA <$00
+	AND #$20
 	CMP #$20
 	BNE ExitNMI
 	JSR RunTest2	; select can be held for convenience
@@ -699,8 +701,7 @@ NotPressingLeft:
 	LDA <$00
 	AND #$08
 	BEQ NotPressingUp
-	LDA #$FF
-	STA $2007
+	LDA $2007
 NotPressingUp:
 	
 	CPY #0
